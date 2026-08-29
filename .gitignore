@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+machinelearning/staticmodels/
+mlartifacts/
+.vscode
+.env
+.DS_Store
+.python-version
+README copy.md
+mlflow.db
+AAPL_*
+MSFT_*
+local/
