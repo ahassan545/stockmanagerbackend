@@ -1,10 +1,12 @@
 import mlflow
 import os
 import shutil
+
 STATIC_PATH = "./machinelearning/staticmodels"
 
 mlflow.set_tracking_uri(os.environ.get("TRACKING_URL"))
 mlflow.sklearn.autolog()
+
 
 class ModelManager:
     def __init__(self, model, name) -> None:
@@ -12,7 +14,7 @@ class ModelManager:
         self.location = f"{STATIC_PATH}/{name}"
         self.run_name = name
 
-    @staticmethod   
+    @staticmethod
     def load(name) -> any:
         return mlflow.sklearn.load_model(f"{STATIC_PATH}/{name}")
 
