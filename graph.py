@@ -3,6 +3,7 @@ from models.agentmodel import AgentState
 from stockagents.newsagent import NewsAgent
 from stockagents.riskanalystagent import RiskAnalystAgent
 
+
 class StockStateGraph:
     def __init__(
         self,

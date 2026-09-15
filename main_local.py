@@ -14,8 +14,6 @@ from stockagents.stateagents import (
 
 
 def main():
-
-
     stock_graph = StockStateGraph(
         news_agent=NewsAgent(news_service=NewsService()),
         risk_analyst_agent=RiskAnalystAgent(),

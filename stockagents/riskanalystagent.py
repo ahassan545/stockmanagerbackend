@@ -62,7 +62,11 @@ class RiskAnalystAgent:
             return "SELL"
 
     def _get_final_score(
-        self, fraud_score: int, fundamental_score: int, technical_score: int, sentiment_score: int
+        self,
+        fraud_score: int,
+        fundamental_score: int,
+        technical_score: int,
+        sentiment_score: int,
     ) -> float:
         final_score = (
             (fraud_score * self.fraud_weight)

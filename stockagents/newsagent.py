@@ -13,7 +13,9 @@ class NewsSentimentAnalyzer(dspy.Signature):
     """
 
     news_articles: list = dspy.InputField()
-    sentiment_score: str = dspy.OutputField()
+    sentiment_score: int = dspy.OutputField(
+        desc="value between -1 and 1, where -1 is negative sentiment, 0 is neutral, and 1 is positive sentiment."
+    )
 
 
 class NewsAgent:
